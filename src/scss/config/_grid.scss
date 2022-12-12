@@ -1,0 +1,6 @@
+.container {
+  max-width: $containerWidth;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 calc($containerPadding / 2) + px;
+}

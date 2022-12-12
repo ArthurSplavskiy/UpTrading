@@ -1,0 +1,20 @@
+$fontSize: rem(18);
+
+$minWidth: 320;
+$maxWidth: 1440;
+$maxWidthContainer: 1320;
+$maxWidthContainerPX: 1400px;
+$containerPadding: 24;
+$containerWidth: $maxWidthContainer + $containerPadding + px;
+
+$fullHd: em(1920);
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
+
+$transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+$z-indexes: ('header', 'footer', 'wrapper-main');
+
+$bottom-line: inset 0px -1px 0px #525259;

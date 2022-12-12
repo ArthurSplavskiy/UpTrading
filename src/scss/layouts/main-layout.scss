@@ -1,0 +1,6 @@
+.wrapper {
+	min-height: 100vh;
+	main {
+		z-index: z('wrapper-main');
+	}
+}

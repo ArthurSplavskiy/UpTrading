@@ -1,0 +1,65 @@
+button {
+	&:active {
+		transform: scale(0.95);
+	}
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 120%;
+	text-transform: capitalize;
+	transition: $transition;
+	cursor: pointer;
+
+	&:hover {
+		.btn-circle {
+			transform: scale(0.95);
+			svg {
+				transform: translateX(2px);
+			}
+		}
+		.btn-text {
+			color: $orange;
+		}
+	}
+	&-circle {
+		width: 56px;
+		height: 56px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $orange;
+		border-radius: 100%;
+		transition: $transition;
+		&:hover {
+			& + .btn-text {
+				color: $orange;
+			}
+		}
+		svg {
+			transition: $transition;
+		}
+	}
+
+	&-text {
+		margin-left: 16px;
+		transition: $transition;
+	}
+
+	&-white {
+		color: white;
+		&:hover {
+			color: $orange;
+		}
+	}
+
+	&-black {
+		color: black;
+		&:hover {
+			color: $orange;
+		}
+	}
+}
