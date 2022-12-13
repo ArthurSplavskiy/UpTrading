@@ -92,6 +92,7 @@
 }
 
 .s-partners-content {
+	overflow: hidden;
 	@media (max-width: $mobile) {
 		padding: 0 !important;
 		border-color: transparent !important;

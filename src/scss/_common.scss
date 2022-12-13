@@ -174,3 +174,19 @@ select:-webkit-autofill:focus {
 	-webkit-box-shadow: none;
 	transition: background-color 25000s ease-in-out 0s;
 }
+
+.sticky-spacer {
+	@media (min-width: $tablet) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		section {
+			min-height: 100vh;
+			position: sticky;
+			top: 0;
+			&:last-child {
+				top: 200vh;
+			}
+		}
+	}
+}
