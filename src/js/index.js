@@ -2,7 +2,7 @@ import * as functions from './core/utils/functions.js';
 import * as forms from './core/forms/forms.js';
 import './core/modules/animation.js';
 import './core/modules/sliders.js';
-import './core/forms/select.js';
+//import './core/forms/select.js';
 import './core/modules/hoverTabs.js';
 import '../scss/style.scss';
 import { numberGrover } from './core/modules/number-grover.js';
