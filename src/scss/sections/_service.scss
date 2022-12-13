@@ -16,6 +16,11 @@
 		border: 1px solid #f4efea;
 		border-radius: 10px;
 		overflow: hidden;
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
 		&-text {
 			padding: 16px 24px 24px 24px;
 			@media (max-width: $mobile) {
@@ -41,6 +46,7 @@
 		&-img {
 			height: 304px;
 			position: relative;
+			overflow: hidden;
 			@media (max-width: $mobile) {
 				height: 200px;
 			}
@@ -49,6 +55,7 @@
 				height: 100%;
 				@extend %cover;
 				object-fit: cover;
+				transition: $transition;
 			}
 		}
 	}

@@ -15,6 +15,10 @@
 		position: absolute;
 		inset: 0;
 		overflow: hidden;
+		video,
+		iframe,
+		object,
+		embed,
 		img {
 			width: 100%;
 			height: 100%;

@@ -54,5 +54,11 @@ export const documentClick = (e) => {
 		removeClasses('.header [data-spoller]', '_spoller-active');
 		_slideUp('.header [data-spoller] + *', 500);
 	}
+
+	const $targetFooterSpoller = functions.isTarget(targetElement, '.footer [data-spoller]');
+	if (!$targetFooterSpoller) {
+		removeClasses('.footer [data-spoller]', '_spoller-active');
+		_slideUp('.footer [data-spoller] + *', 500);
+	}
 	// ===================
 };

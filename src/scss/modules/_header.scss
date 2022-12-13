@@ -33,6 +33,10 @@
 
 	&-menu {
 		width: 100%;
+		max-width: 648px;
+		@media (max-width: $tablet) {
+			margin-bottom: 40px;
+		}
 		&-list {
 			display: flex;
 			flex-wrap: wrap;

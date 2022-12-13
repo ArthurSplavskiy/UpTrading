@@ -13,6 +13,11 @@
 		border-radius: 10px;
 		overflow: hidden;
 		position: relative;
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
 		&:after {
 			content: '';
 			position: absolute;
@@ -45,6 +50,7 @@
 		&-img {
 			height: 274px;
 			position: relative;
+			overflow: hidden;
 			@media (max-width: $mobile) {
 				height: 200px;
 			}
@@ -53,6 +59,7 @@
 				height: 100%;
 				@extend %cover;
 				object-fit: cover;
+				transition: $transition;
 			}
 		}
 	}

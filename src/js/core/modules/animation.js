@@ -297,8 +297,11 @@ el.document.ready(function () {
 	document.body.classList.add('ontouchstart' in document.documentElement ? 'touch' : 'no-touch');
 
 	//anchors
-	$("a[href^='#'], [data-anchor]").click(function (e) {
+	$("a[href^='#']").click(function (e) {
 		e.preventDefault();
+	});
+	$("a[href^='#'], [data-anchor]").click(function (e) {
+		//e.preventDefault();
 
 		let _this = $(this),
 			elDta;
@@ -324,13 +327,13 @@ el.document.ready(function () {
 
 			top = elDta.offset().top;
 
-			if (
-				(nav.length && nav.css('position') === 'fixed') ||
-				('absolute' && el.documentH > el.windowtH)
-			) {
-				navHeight = el.header.outerHeight();
-				top -= navHeight + 50;
-			}
+			// if (
+			// 	(nav.length && nav.css('position') === 'fixed') ||
+			// 	('absolute' && el.documentH > el.windowtH)
+			// ) {
+			// 	navHeight = el.header.outerHeight();
+			// 	top -= navHeight + 50;
+			// }
 			funScroll(top);
 
 			if (el.navToggle.hasClass('active')) {
