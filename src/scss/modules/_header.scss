@@ -34,7 +34,7 @@
 	&-menu {
 		width: 100%;
 		max-width: 648px;
-		@media (max-width: $tablet) {
+		@media (max-width: $mobile) {
 			margin-bottom: 40px;
 		}
 		&-list {

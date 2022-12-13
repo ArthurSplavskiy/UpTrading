@@ -10,7 +10,6 @@ import {
 } from '../utils/functions.js';
 
 const $popupCV = document.querySelector('#popup-cv');
-const $menusSecondLvl = document.querySelectorAll('[data-second-lvl]');
 const $pageMenu = document.querySelector('[data-menu]');
 const $pageMenuBtn = document.querySelector('[data-menu-btn]');
 
@@ -45,10 +44,21 @@ export const documentClick = (e) => {
 	if ($menuBtn && $pageMenu) {
 		if (bodyLockStatus) {
 			bodyLockToggle();
-			$menuBtn.classList.toggle('js-open');
+			$pageMenuBtn.classList.toggle('js-open');
 			$pageMenu.classList.toggle('js-open');
 		}
 	}
+
+	const $menuAnchors = functions.isTarget(targetElement, '[data-anchor]');
+
+	if ($menuAnchors && $pageMenu && window.innerWidth < 768) {
+		if (bodyLockStatus) {
+			bodyLockToggle();
+			$pageMenuBtn.classList.toggle('js-open');
+			$pageMenu.classList.toggle('js-open');
+		}
+	}
+
 	const $targetHeaderSpoller = functions.isTarget(targetElement, '.header [data-spoller]');
 	if (!$targetHeaderSpoller) {
 		removeClasses('.header [data-spoller]', '_spoller-active');

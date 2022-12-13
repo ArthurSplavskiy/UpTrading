@@ -327,13 +327,12 @@ el.document.ready(function () {
 
 			top = elDta.offset().top;
 
-			// if (
-			// 	(nav.length && nav.css('position') === 'fixed') ||
-			// 	('absolute' && el.documentH > el.windowtH)
-			// ) {
-			// 	navHeight = el.header.outerHeight();
-			// 	top -= navHeight + 50;
-			// }
+			if (nav.length && nav.css('position') === 'fixed') {
+				// ||
+				'absolute' && el.documentH > el.windowtH;
+				navHeight = el.header.outerHeight();
+				top -= navHeight;
+			}
 			funScroll(top);
 
 			if (el.navToggle.hasClass('active')) {
