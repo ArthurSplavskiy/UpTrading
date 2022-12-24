@@ -9,7 +9,7 @@
 		}
 		@media (max-width: $tablet) {
 			grid-template-columns: 1fr;
-			gap: 36px;
+			gap: 10px;
 		}
 	}
 	&-list {
@@ -31,6 +31,12 @@
 		margin-bottom: 24px;
 		@media (max-width: $mobile) {
 			margin-bottom: 16px;
+		}
+		h2 {
+			color: #1c1c1e;
+		}
+		p {
+			color: #61616a;
 		}
 	}
 	&-text-list {

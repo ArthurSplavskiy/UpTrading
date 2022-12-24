@@ -46,7 +46,7 @@
 				display: flex;
 				align-items: center;
 				font-weight: 700;
-				font-size: 38px;
+				font-size: 40px;
 				color: #76777e;
 				cursor: pointer;
 				transition: $transition;
@@ -73,6 +73,9 @@
 			}
 
 			p {
+				font-size: 14px;
+				line-height: 24px;
+				font-weight: 600;
 				transition: $transition;
 				max-height: 0;
 				overflow: hidden;

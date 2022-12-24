@@ -13,6 +13,8 @@
 			margin-bottom: 32px !important;
 		}
 		.news-cart {
+			background: none;
+			border: none;
 			h4 {
 				color: black;
 			}
@@ -89,13 +91,18 @@
 			@media (max-width: $mobile) {
 				width: 56px;
 				height: 56px;
-				border: 1px solid $light-blue;
+				border: 1px solid $orange;
 				background: transparent;
 				svg {
 					width: 14px;
+					fill: $orange;
 				}
 				&:hover {
-					background: $light-blue;
+					filter: none !important;
+					background: $orange;
+					svg {
+						fill: white;
+					}
 				}
 			}
 			&-prev {

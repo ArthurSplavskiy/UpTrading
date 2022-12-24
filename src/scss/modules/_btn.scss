@@ -21,6 +21,14 @@ button {
 				transform: translateX(2px);
 			}
 		}
+		&.btn-no-fill {
+			.btn-circle {
+				background: $orange;
+				svg {
+					fill: white;
+				}
+			}
+		}
 		.btn-text {
 			color: $orange;
 		}
@@ -60,6 +68,16 @@ button {
 		color: black;
 		&:hover {
 			color: $orange;
+		}
+	}
+
+	&-no-fill {
+		.btn-circle {
+			background: white;
+			border: 1px solid $orange;
+			svg {
+				fill: $orange;
+			}
 		}
 	}
 }

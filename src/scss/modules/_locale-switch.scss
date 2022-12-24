@@ -6,7 +6,7 @@
 		}
 	}
 	&-head {
-		transition: $transition;
+		//transition: $transition;
 		border: 1px solid #ededef;
 		padding: 16px;
 		width: 152px;
@@ -65,6 +65,8 @@
 		}
 	}
 	&-arrow {
+		width: 16px;
+		height: 16px;
 		transition: $transition;
 	}
 }

@@ -49,7 +49,7 @@ export const documentClick = (e) => {
 		}
 	}
 
-	const $menuAnchors = functions.isTarget(targetElement, '[data-anchor]');
+	const $menuAnchors = functions.isTarget(targetElement, '.menu [data-anchor]');
 
 	if ($menuAnchors && $pageMenu && window.innerWidth < 768) {
 		if (bodyLockStatus) {

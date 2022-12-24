@@ -1,5 +1,6 @@
 //common uses selectors
 import { debounce } from '../utils/functions.js';
+import { addLottieAnimation } from '../utils/functions.js';
 
 let el = {
 	header: $('header'),
@@ -271,7 +272,7 @@ function animateStart() {
 function funPreloader() {
 	el.preloader.addClass(el.preloaderCl);
 	setTimeout(function () {
-		animateStart();
+		animateStart?.();
 	}, 400);
 	setTimeout(function () {
 		el.preloader.remove();
@@ -281,9 +282,24 @@ function funPreloader() {
 $(window).on('load', function () {
 	//after full load
 	//hide preloader after load
-	if (!el.preloader.hasClass(el.preloaderCl)) {
+	const firstLoad = document.cookie
+		.split(';')
+		.filter((c) => c.includes('firstLoad'))?.[0]
+		?.split('=')?.[1];
+
+	if (!Boolean(firstLoad) && !el.preloader.hasClass(el.preloaderCl)) {
+		setTimeout(() => {
+			funPreloader();
+		}, 4000);
+	} else {
 		funPreloader();
 	}
+
+	if (!Boolean(firstLoad)) {
+		addLottieAnimation('[data-lottie="preloader"]', 'others/preloader.json');
+	}
+
+	document.cookie = 'firstLoad=false; max-age=60*60*12';
 });
 
 el.document.ready(function () {

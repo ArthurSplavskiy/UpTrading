@@ -97,6 +97,12 @@
 						@extend %text-16;
 					}
 				}
+				@media (max-width: $mobile) {
+					svg {
+						width: 24px;
+						height: 24px;
+					}
+				}
 			}
 		}
 	}

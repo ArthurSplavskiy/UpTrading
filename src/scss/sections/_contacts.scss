@@ -1,7 +1,8 @@
 .s-contacts {
 	h2 {
 		text-transform: none;
-		font-size: 32px;
+		font-size: 40px;
+		line-height: 100%;
 		margin-bottom: 24px;
 		@media (max-width: $mobile) {
 			font-size: 24px;
@@ -11,7 +12,7 @@
 	}
 	&-grid {
 		display: grid;
-		grid-template-columns: 2fr 1fr 2.2fr;
+		grid-template-columns: 2.2fr 1fr 2.2fr;
 		grid-template-areas: 'c1 . c2';
 		@media (max-width: $tablet) {
 			grid-template-columns: 1fr;
@@ -30,6 +31,7 @@
 	&-img {
 		border-radius: 10px;
 		height: 400px;
+		max-width: 448px;
 		position: relative;
 		@media (max-width: $mobile) {
 			height: 200px;

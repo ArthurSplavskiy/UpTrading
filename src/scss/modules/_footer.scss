@@ -254,6 +254,11 @@
 		font-size: 12px;
 		line-height: 12px;
 		font-weight: 400;
+		@media (max-width: $mobileSmall) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: 'copyright increate' 'policy increate';
+		}
 		a {
 			&:nth-child(2) {
 				text-decoration-line: underline;
@@ -271,6 +276,18 @@
 			&:hover {
 				opacity: 0.8;
 			}
+		}
+	}
+	&-copyright {
+		grid-area: copyright;
+	}
+	&-policy {
+		grid-area: policy;
+	}
+	&-increate {
+		grid-area: increate;
+		@media (max-width: $mobileSmall) {
+			justify-self: end;
 		}
 	}
 }

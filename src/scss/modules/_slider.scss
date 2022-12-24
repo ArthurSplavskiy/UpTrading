@@ -93,6 +93,11 @@
 
 .s-partners {
 	overflow: hidden;
+	.s-headline {
+		p {
+			color: #76777e;
+		}
+	}
 }
 .s-partners-content {
 	@media (max-width: $mobile) {

@@ -10,9 +10,39 @@ import { documentClick } from './core/events/click.js';
 import { windowResize } from './core/events/resize.js';
 import ScrollObserver from './core/utils/observer.js';
 
+const $preloader = document.querySelector('.preloader');
+
+function funPreloader() {
+	$preloader.classList.add('preloader_hide');
+	setTimeout(function () {
+		animateStart();
+	}, 400);
+	setTimeout(function () {
+		$preloader.remove();
+	}, 1000);
+}
+
+const hidePreloaderByCookie = (cookies) => {
+	const firstLoad = cookies
+		.split(';')
+		.filter((c) => c.includes('firstLoad'))?.[0]
+		?.split('=')?.[1];
+
+	if (!Boolean(firstLoad)) {
+		$preloader.remove();
+		funPreloader();
+	} else if (!$preloader.classList.contains('preloader_hide')) {
+		setTimeout(() => {
+			funPreloader();
+		}, 4000);
+	}
+};
+
 const init = () => {
 	const $html = document.documentElement;
 	$html.classList.add('loaded');
+
+	const firstLoad = document.cookie.split(';').filter((c) => c.includes('firstLoad'));
 
 	forms.formFieldsInit();
 	forms.formSubmit(true);
@@ -27,6 +57,8 @@ const init = () => {
 			threshold: 0.1
 		}
 	});
+
+	hidePreloaderByCookie(document.cookie);
 
 	document.addEventListener('click', documentClick);
 	window.addEventListener('resize', windowResize);

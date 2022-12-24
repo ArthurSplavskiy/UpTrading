@@ -55,6 +55,8 @@
 		}
 	}
 	.news-cart {
+		background: none;
+		border: none;
 		&-img {
 			min-height: 340px;
 			@media (max-width: $mobileSmall) {

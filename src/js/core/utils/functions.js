@@ -375,7 +375,7 @@ export function spollers() {
 					spollerTitle.classList.toggle('_spoller-active');
 					_slideToggle(
 						spollerTitle.nextElementSibling,
-						spollersBlock.dataset.duration ? spollersBlock.dataset.duration : 500
+						spollersBlock.dataset.duration ? spollersBlock.dataset.duration : 0
 					);
 				}
 				//e.preventDefault();
@@ -387,7 +387,7 @@ export function spollers() {
 				spollerActiveTitle.classList.remove('_spoller-active');
 				_slideUp(
 					spollerActiveTitle.nextElementSibling,
-					spollersBlock.dataset.duration ? spollersBlock.dataset.duration : 500
+					spollersBlock.dataset.duration ? spollersBlock.dataset.duration : 0
 				);
 			}
 		}
@@ -764,24 +764,24 @@ export function setFloatLabels() {
 
 // INPUT TYPE FILE ===================================================================================
 export function setFileInputs() {
-	const fileInputs = document.querySelectorAll('[data-input-file]')
+	const fileInputs = document.querySelectorAll('[data-input-file]');
 
-	if(fileInputs.length > 0) {
-		for(let i = 0; i < fileInputs.length; i++) {
+	if (fileInputs.length > 0) {
+		for (let i = 0; i < fileInputs.length; i++) {
 			const fileInputContainer = fileInputs[i];
 			const inputFile = fileInputContainer.querySelector('input');
 			const fileButton = fileInputContainer.querySelector('.icon-pin');
 			const filePreview = fileInputContainer.querySelector('.message-text');
 			const maxSizeError = inputFile.getAttribute('data-error-max-size');
 			const placeholder = inputFile.getAttribute('data-placeholder');
-			filePreview.innerHTML = placeholder
+			filePreview.innerHTML = placeholder;
 
 			// remove file preview
 			fileButton.onclick = () => {
-				if(inputFile.classList.contains('full')) {
-					inputFile.classList.remove('full')
+				if (inputFile.classList.contains('full')) {
+					inputFile.classList.remove('full');
 					inputFile.value = '';
-					filePreview.innerHTML = placeholder
+					filePreview.innerHTML = placeholder;
 				}
 			};
 
@@ -791,7 +791,6 @@ export function setFileInputs() {
 			});
 
 			function uploadFile(file) {
-
 				if (!['application/pdf', 'image/png', 'application/msword'].includes(file.type)) {
 					//form_add_error(inputFile)
 					inputFile.value = '';
@@ -806,8 +805,8 @@ export function setFileInputs() {
 					return;
 				}
 
-				inputFile.classList.add('full')
-				filePreview.innerHTML = file.name
+				inputFile.classList.add('full');
+				filePreview.innerHTML = file.name;
 			}
 		}
 	}

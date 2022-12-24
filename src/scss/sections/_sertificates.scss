@@ -32,6 +32,9 @@
 				padding-bottom: 24px;
 			}
 		}
+		.btn-circle {
+			transform: rotate(90deg);
+		}
 		&-img {
 			min-height: 260px;
 			border: 1px solid #d9d9dc;

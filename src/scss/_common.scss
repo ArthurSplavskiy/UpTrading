@@ -190,3 +190,13 @@ select:-webkit-autofill:focus {
 		}
 	}
 }
+
+.load-more-panel {
+	display: flex;
+	justify-content: center;
+	margin-top: 24px;
+}
+
+._hold {
+	pointer-events: none;
+}
