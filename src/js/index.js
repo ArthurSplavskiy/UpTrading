@@ -44,6 +44,16 @@ const init = () => {
 
 	const firstLoad = document.cookie.split(';').filter((c) => c.includes('firstLoad'));
 
+	if (navigator.appVersion.indexOf('Win') != -1) {
+		$html.classList.add('on-windows');
+	}
+	if (navigator.appVersion.indexOf('Mac') != -1) {
+	}
+	if (navigator.appVersion.indexOf('X11') != -1) {
+	}
+	if (navigator.appVersion.indexOf('Linux') != -1) {
+	}
+
 	forms.formFieldsInit();
 	forms.formSubmit(true);
 	functions.setPhoneMask();
