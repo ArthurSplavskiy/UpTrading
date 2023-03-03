@@ -84,6 +84,7 @@
 		border: 1px solid rgba(255, 255, 255, 0.5);
 		border-radius: 10px;
 		min-height: 210px;
+		justify-content: center;
 		svg {
 			margin-bottom: 24px;
 			@media (max-width: $mobile) {

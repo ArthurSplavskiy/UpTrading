@@ -2,7 +2,6 @@
 	&-list {
 		margin-top: 112px;
 		display: grid;
-		align-items: baseline;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 24px;
 		@media (max-width: $tablet) {
